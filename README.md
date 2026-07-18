@@ -4,7 +4,23 @@
 ![Flask](https://img.shields.io/badge/Flask-3.x-black?logo=flask)
 ![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-purple)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv)
+![Patent](https://img.shields.io/badge/Patent-Published-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+
+---
+
+## 🏛️ Patent Information
+
+> **This project is based on a published patent.**
+
+| Field | Details |
+|-------|---------|
+| 📌 **Title** | An AI-Assisted Context-Aware Smart Classroom Automation System |
+| 🔢 **Application Number** | 202641074230 |
+| 📅 **Filing Date** | 26/06/2026 |
+| 📋 **Status** | **Published** (SCOPE) |
+| 👨‍🔬 **Inventors** | Dr. Muthunagai S U, Ravishankar S, Keerthi Vasan V |
+| 🏢 **Patent Office** | Indian Patent Office (IPO) |
 
 A patent-grade AI-powered smart classroom system that performs **real-time occupancy detection**, **face recognition attendance**, **environment monitoring**, and **automated device control** — all through a live web dashboard.
 
@@ -369,11 +385,15 @@ This project is licensed under the MIT License.
 
 ---
 
-## 👤 Author
+## 👥 Authors & Inventors
 
-**Ravishankar Subramani**  
-GitHub: [@Ravishankarsubramani27](https://github.com/Ravishankarsubramani27)
+| Name | Role |
+|------|------|
+| **Dr. Muthunagai S U** | Guide & Co-Inventor |
+| **Ravishankar S** | Developer & Co-Inventor · [@Ravishankarsubramani27](https://github.com/Ravishankarsubramani27) |
+| **Keerthi Vasan V** | Co-Inventor |
 
 ---
 
-> 🏆 Built as a patent-grade intelligent classroom system combining computer vision, AI, and IoT automation.
+> 🏆 Patent Published · Application No. 202641074230 · Indian Patent Office  
+> An AI-Assisted Context-Aware Smart Classroom Automation System combining computer vision, face recognition, and IoT automation.
