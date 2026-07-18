@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timetable Editor - Smart Classroom</title>
+<link rel="stylesheet" href="/static/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.editor-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.day-section {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.day-title {
+  color: #64b5f6;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.class-list {
+  display: grid;
+  gap: 15px;
+}
+
+.class-item {
+  background: rgba(33, 150, 243, 0.1);
+  border: 1px solid rgba(33, 150, 243, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr auto;
+  gap: 15px;
+  align-items: center;
+}
+
+.class-item input, .class-item select {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(33, 150, 243, 0.3);
+  border-radius: 8px;
+  padding: 10px;
+  color: #e0e7ff;
+  font-size: 1em;
+}
+
+.class-item input:focus, .class-item select:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.3);
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  color: white;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #4caf50, #43a047);
+  color: white;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #f44336, #e53935);
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+}
+
+.save-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#feedback {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: none;
+  z-index: 1001;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="editor-container">
+
+  <!-- Navigation -->
+  <div class="nav-bar">
+    <a href="/">🏠 Dashboard</a>
+    <a href="/timetable">📅 View Timetable</a>
+    <a href="/timetable/editor">✏️ Edit Timetable</a>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>✏️ Timetable Editor</h1>
+    <p class="subtitle">Manage your class schedule easily</p>
+  </div>
+
+  <!-- Feedback Message -->
+  <div id="feedback"></div>
+
+  <!-- Editor Content -->
+  <div id="timetable-editor">
+    <p style="text-align:center; color:#64b5f6; padding:40px;">Loading timetable...</p>
+  </div>
+
+  <!-- Save Button -->
+  <div class="save-bar">
+    <button onclick="saveTimetable()" class="btn btn-success" style="font-size:1.1em; padding:15px 30px;">
+      💾 Save Timetable
+    </button>
+  </div>
+
+</div>
+
+<script>
+
+let timetableData = {};
+const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+const dayNames = {
+  "MON": "Monday",
+  "TUE": "Tuesday", 
+  "WED": "Wednesday",
+  "THU": "Thursday",
+  "FRI": "Friday",
+  "SAT": "Saturday",
+  "SUN": "Sunday"
+};
+
+// Load timetable data
+async function loadTimetable() {
+  try {
+    const response = await fetch('/timetable/data');
+    const result = await response.json();
+    
+    if(result.success) {
+      timetableData = result.data;
+      renderEditor();
+    } else {
+      showFeedback('Error loading timetable', 'error');
+    }
+  } catch(error) {
+    console.error('Error:', error);
+    showFeedback('Failed to load timetable', 'error');
+  }
+}
+
+// Render editor
+function renderEditor() {
+  const container = document.getElementById('timetable-editor');
+  container.innerHTML = '';
+  
+  days.forEach(day => {
+    const daySection = document.createElement('div');
+    daySection.className = 'day-section';
+    daySection.innerHTML = `
+      <div class="day-header">
+        <div class="day-title">${dayNames[day]}</div>
+        <button onclick="addClass('${day}')" class="btn btn-primary">
+          ➕ Add Class
+        </button>
+      </div>
+      <div class="class-list" id="classes-${day}"></div>
+    `;
+    container.appendChild(daySection);
+    
+    // Render classes for this day
+    renderClasses(day);
+  });
+}
+
+// Render classes for a day
+function renderClasses(day) {
+  const classList = document.getElementById(`classes-${day}`);
+  classList.innerHTML = '';
+  
+  const classes = timetableData[day] || [];
+  
+  if(classes.length === 0) {
+    classList.innerHTML = '<p style="color:#90caf9; text-align:center; padding:20px;">No classes scheduled</p>';
+    return;
+  }
+  
+  classes.forEach((cls, index) => {
+    const classItem = document.createElement('div');
+    classItem.className = 'class-item';
+    classItem.innerHTML = `
+      <input type="time" value="${cls.start}" 
+             onchange="updateClass('${day}', ${index}, 'start', this.value)"
+             placeholder="Start Time">
+      <input type="time" value="${cls.end}"
+             onchange="updateClass('${day}', ${index}, 'end', this.value)"
+             placeholder="End Time">
+      <input type="text" value="${cls.course || cls.subject || ''}"
+             onchange="updateClass('${day}', ${index}, 'course', this.value)"
+             placeholder="Course Code (e.g. CSI3020)">
+      <select onchange="updateClass('${day}', ${index}, 'type', this.value)">
+        <option value="THEORY" ${cls.type === 'THEORY' ? 'selected' : ''}>THEORY</option>
+        <option value="LAB" ${cls.type === 'LAB' ? 'selected' : ''}>LAB</option>
+      </select>
+      <button onclick="deleteClass('${day}', ${index})" class="btn btn-danger">
+        🗑️
+      </button>
+    `;
+    classList.appendChild(classItem);
+  });
+}
+
+// Add new class
+function addClass(day) {
+  if(!timetableData[day]) {
+    timetableData[day] = [];
+  }
+  
+  timetableData[day].push({
+    start: "09:00",
+    end: "10:00",
+    course: "NEW0000",
+    type: "THEORY",
+    slot: "A1",
+    venue: "TBD"
+  });
+  
+  renderClasses(day);
+}
+
+// Update class
+function updateClass(day, index, field, value) {
+  if(field === 'start' || field === 'end') {
+    // Convert time input to HH:MM format
+    timetableData[day][index][field] = value;
+  } else {
+    timetableData[day][index][field] = value;
+  }
+}
+
+// Delete class
+function deleteClass(day, index) {
+  if(confirm('Delete this class?')) {
+    timetableData[day].splice(index, 1);
+    renderClasses(day);
+  }
+}
+
+// Save timetable
+async function saveTimetable() {
+  try {
+    const response = await fetch('/timetable/save', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(timetableData)
+    });
+    
+    const result = await response.json();
+    
+    if(result.success) {
+      showFeedback('✅ Timetable saved successfully!', 'success');
+    } else {
+      showFeedback('❌ Error saving timetable', 'error');
+    }
+  } catch(error) {
+    console.error('Error:', error);
+    showFeedback('❌ Failed to save timetable', 'error');
+  }
+}
+
+// Show feedback message
+function showFeedback(message, type) {
+  const feedback = document.getElementById('feedback');
+  feedback.textContent = message;
+  feedback.style.display = 'block';
+  
+  if(type === 'success') {
+    feedback.style.background = 'linear-gradient(135deg, #4caf50, #43a047)';
+    feedback.style.color = 'white';
+  } else {
+    feedback.style.background = 'linear-gradient(135deg, #f44336, #e53935)';
+    feedback.style.color = 'white';
+  }
+  
+  setTimeout(() => {
+    feedback.style.display = 'none';
+  }, 3000);
+}
+
+// Load on page load
+loadTimetable();
+
+</script>
+
+</body>
+</html>

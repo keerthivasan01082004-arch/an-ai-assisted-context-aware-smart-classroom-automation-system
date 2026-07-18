@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Recognition Enrollment - Smart Classroom AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <style>
+    .enroll-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+    
+    .enroll-form {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      color: #64b5f6;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 16px;
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    
+    .btn-enroll {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: white;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .btn-enroll:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+    }
+    
+    .students-list {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 16px;
+      padding: 30px;
+    }
+    
+    .student-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .student-info h3 {
+      color: #3b82f6;
+      margin: 0 0 8px 0;
+    }
+    
+    .student-info p {
+      color: #94a3b8;
+      margin: 4px 0;
+      font-size: 14px;
+    }
+    
+    .btn-delete {
+      background: #ef4444;
+      color: white;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .btn-delete:hover {
+      background: #dc2626;
+    }
+    
+    .message {
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    
+    .message.success {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      color: #10b981;
+    }
+    
+    .message.error {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid #ef4444;
+      color: #ef4444;
+    }
+    
+    .preview-image {
+      max-width: 200px;
+      max-height: 200px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 2px solid rgba(59, 130, 246, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🎓 Face Recognition Enrollment</h1>
+    <div class="nav-buttons">
+      <button onclick="location.href='/'">🏠 Dashboard</button>
+      <button onclick="location.href='/timetable'">📅 Timetable</button>
+      <button onclick="loadStudents()">🔄 Refresh</button>
+    </div>
+  </div>
+
+  <div class="enroll-container">
+    <div id="message"></div>
+    
+    <!-- Enrollment Form -->
+    <div class="enroll-form">
+      <h2 style="color: #3b82f6; margin-bottom: 20px;">📸 Enroll New Student</h2>
+      <form id="enrollForm" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="student_id">Student ID *</label>
+          <input type="text" id="student_id" name="student_id" placeholder="e.g., 21BCE1234" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="student_name">Full Name *</label>
+          <input type="text" id="student_name" name="student_name" placeholder="e.g., John Doe" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="photo">Photo (Clear face photo) *</label>
+          <input type="file" id="photo" name="photo" accept="image/*" required onchange="previewImage(event)">
+          <img id="preview" class="preview-image" style="display: none;">
+        </div>
+        
+        <button type="submit" class="btn-enroll">✅ Enroll Student</button>
+      </form>
+    </div>
+    
+    <!-- Enrolled Students List -->
+    <div class="students-list">
+      <h2 style="color: #3b82f6; margin-bottom: 20px;">👥 Enrolled Students (<span id="studentCount">0</span>)</h2>
+      <div id="studentsList"></div>
+    </div>
+  </div>
+
+  <script>
+    // Load enrolled students on page load
+    window.onload = function() {
+      loadStudents();
+    };
+    
+    // Preview uploaded image
+    function previewImage(event) {
+      const preview = document.getElementById('preview');
+      const file = event.target.files[0];
+      
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+    
+    // Enroll student form submission
+    document.getElementById('enrollForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const messageDiv = document.getElementById('message');
+      
+      try {
+        const response = await fetch('/face/enroll', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          showMessage(result.message, 'success');
+          this.reset();
+          document.getElementById('preview').style.display = 'none';
+          loadStudents();
+        } else {
+          showMessage(result.error, 'error');
+        }
+      } catch (error) {
+        showMessage('Error enrolling student: ' + error.message, 'error');
+      }
+    });
+    
+    // Load enrolled students
+    async function loadStudents() {
+      try {
+        const response = await fetch('/face/students');
+        const result = await response.json();
+        
+        if (result.success) {
+          displayStudents(result.students);
+        }
+      } catch (error) {
+        console.error('Error loading students:', error);
+      }
+    }
+    
+    // Display students list
+    function displayStudents(students) {
+      const listDiv = document.getElementById('studentsList');
+      const countSpan = document.getElementById('studentCount');
+      
+      countSpan.textContent = students.length;
+      
+      if (students.length === 0) {
+        listDiv.innerHTML = '<p style="text-align: center; color: #94a3b8;">No students enrolled yet</p>';
+        return;
+      }
+      
+      listDiv.innerHTML = students.map(student => `
+        <div class="student-card">
+          <div class="student-info">
+            <h3>${student.name}</h3>
+            <p>ID: ${student.id}</p>
+            <p>Enrolled: ${student.enrolled_date}</p>
+          </div>
+          <button class="btn-delete" onclick="deleteStudent('${student.id}')">🗑️ Delete</button>
+        </div>
+      `).join('');
+    }
+    
+    // Delete student
+    async function deleteStudent(studentId) {
+      if (!confirm(`Are you sure you want to delete student ${studentId}?`)) {
+        return;
+      }
+      
+      try {
+        const response = await fetch(`/face/delete/${studentId}`, {
+          method: 'DELETE'
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          showMessage(result.message, 'success');
+          loadStudents();
+        } else {
+          showMessage(result.error, 'error');
+        }
+      } catch (error) {
+        showMessage('Error deleting student: ' + error.message, 'error');
+      }
+    }
+    
+    // Show message
+    function showMessage(text, type) {
+      const messageDiv = document.getElementById('message');
+      messageDiv.innerHTML = `<div class="message ${type}">${text}</div>`;
+      
+      setTimeout(() => {
+        messageDiv.innerHTML = '';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "MON": [
+    {"start": "08:00", "end": "08:50", "slot": "A1", "course": "CSI3020", "type": "THEORY", "venue": "SJT522"},
+    {"start": "09:00", "end": "09:50", "slot": "L3", "course": "CSI3012", "type": "LAB", "venue": "PRP118"},
+    {"start": "10:00", "end": "10:50", "slot": "L4", "course": "CSI3012", "type": "LAB", "venue": "PRP118"},
+    {"start": "14:00", "end": "14:50", "slot": "A2", "course": "CSI3020", "type": "THEORY", "venue": "SJT522"},
+    {"start": "15:00", "end": "15:50", "slot": "F2", "course": "CSI4004", "type": "THEORY", "venue": "SJT601"},
+    {"start": "16:00", "end": "16:50", "slot": "D2", "course": "STS4022", "type": "THEORY", "venue": "SJT114"},
+    {"start": "17:00", "end": "17:50", "slot": "TB2", "course": "CSI3032", "type": "THEORY", "venue": "SJT601"},
+    {"start": "18:00", "end": "18:50", "slot": "TG2", "course": "CSI3014", "type": "THEORY", "venue": "SJT522"}
+  ],
+  "TUE": [
+    {"start": "10:00", "end": "10:50", "slot": "L11", "course": "CSI2007", "type": "LAB", "venue": "PRP354"},
+    {"start": "11:00", "end": "11:50", "slot": "L12", "course": "CSI2007", "type": "LAB", "venue": "PRP354"},
+    {"start": "14:00", "end": "14:50", "slot": "B2", "course": "CSI3032", "type": "THEORY", "venue": "SJT601"},
+    {"start": "15:00", "end": "15:50", "slot": "G2", "course": "CSI3014", "type": "THEORY", "venue": "SJT522"},
+    {"start": "16:00", "end": "16:50", "slot": "E2", "course": "CSI2007", "type": "THEORY", "venue": "PRP134"},
+    {"start": "17:00", "end": "17:50", "slot": "TC2", "course": "CSI3012", "type": "THEORY", "venue": "SJT504"},
+    {"start": "18:00", "end": "18:50", "slot": "TAA2", "course": "PHY1901", "type": "THEORY", "venue": "PRP124"}
+  ],
+  "WED": [
+    {"start": "09:00", "end": "09:50", "slot": "A1", "course": "CSI3020", "type": "THEORY", "venue": "SJT522"},
+    {"start": "14:00", "end": "14:50", "slot": "C2", "course": "CSI3012", "type": "THEORY", "venue": "SJT504"},
+    {"start": "15:00", "end": "15:50", "slot": "A2", "course": "CSI3020", "type": "THEORY", "venue": "SJT522"},
+    {"start": "16:00", "end": "16:50", "slot": "F2", "course": "CSI4004", "type": "THEORY", "venue": "SJT601"},
+    {"start": "17:00", "end": "17:50", "slot": "TD2", "course": "STS4022", "type": "THEORY", "venue": "SJT114"}
+  ],
+  "THU": [
+    {"start": "14:00", "end": "14:50", "slot": "D2", "course": "STS4022", "type": "THEORY", "venue": "SJT114"},
+    {"start": "15:00", "end": "15:50", "slot": "B2", "course": "CSI3032", "type": "THEORY", "venue": "SJT601"},
+    {"start": "16:00", "end": "16:50", "slot": "G2", "course": "CSI3014", "type": "THEORY", "venue": "SJT522"},
+    {"start": "17:00", "end": "17:50", "slot": "TE2", "course": "CSI2007", "type": "THEORY", "venue": "PRP134"}
+  ],
+  "FRI": [
+    {"start": "09:00", "end": "09:50", "slot": "C1", "course": "CSI3012", "type": "THEORY", "venue": "SJT504"},
+    {"start": "10:00", "end": "10:50", "slot": "TA1", "course": "CSI3020", "type": "THEORY", "venue": "SJT522"},
+    {"start": "14:00", "end": "14:50", "slot": "E2", "course": "CSI2007", "type": "THEORY", "venue": "PRP134"},
+    {"start": "15:00", "end": "15:50", "slot": "C2", "course": "CSI3012", "type": "THEORY", "venue": "SJT504"},
+    {"start": "17:00", "end": "17:50", "slot": "TF2", "course": "CSI4004", "type": "THEORY", "venue": "SJT601"}
+  ],
+  "SAT": [],
+  "SUN": []
+}

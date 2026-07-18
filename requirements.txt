@@ -1,0 +1,11 @@
+flask
+opencv-python
+pytesseract
+ultralytics
+torch
+torchvision
+reportlab
+openpyxl
+face-recognition
+dlib
+numpy

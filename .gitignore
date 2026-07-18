@@ -1,0 +1,33 @@
+# Virtual environment
+yolo311/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Model weights (large binary)
+*.pt
+
+# Face encodings (regenerated on run)
+face_encodings.pkl
+
+# Uploaded/generated files
+uploads/
+reports/
+attendance/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+*.env
