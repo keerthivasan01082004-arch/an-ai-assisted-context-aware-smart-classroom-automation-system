@@ -391,7 +391,7 @@ This project is licensed under the MIT License.
 |------|------|
 | **Dr. Muthunagai S U** | Guide & Co-Inventor |
 | **Ravishankar S** | Developer & Co-Inventor · [@Ravishankarsubramani27](https://github.com/Ravishankarsubramani27) |
-| **Keerthi Vasan V** | Co-Inventor |
+| **Keerthi Vasan V** | Developer & Co-Inventor |
 
 ---
 
