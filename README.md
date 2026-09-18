@@ -1,3 +1,22 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b3d2e,45:0f766e,100:22d3ee&height=210&section=header&text=Smart%20Classroom%20AI&fontSize=52&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=Real-Time%20Intelligent%20Room%20Management%20System&descAlignY=58&descSize=16" width="100%" alt="Smart Classroom AI Banner"/>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=21&duration=2600&pause=700&color=22D3EE&center=true&vCenter=true&width=780&height=45&lines=Real-Time+Occupancy+Detection+with+YOLOv8;Face+Recognition+Attendance+Automation;Live+Environment+%26+Energy+Monitoring;AI-Powered+Predictive+Insights+%26+Alerts;Patent-Published+Smart+Classroom+System" alt="Typing SVG"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Patent-Published-orange?style=for-the-badge" alt="Patent"/>
+  <img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
+  <img src="https://img.shields.io/badge/YOLOv8-Ultralytics-8B5CF6?style=for-the-badge" alt="YOLOv8"/>
+  <img src="https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
+  <img src="https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge" alt="License"/>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,12,20,30&height=3" width="100%"/>
+
 # 🏫 Smart Classroom AI — Real-Time Intelligent Room Management System
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
@@ -29,140 +48,140 @@ A patent-grade AI-powered smart classroom system that performs **real-time occup
 ## 📸 Screenshots
 
 ### 🏠 Dashboard — Real-Time Classroom Status
-<cite index="1-1">Smart Classroom AI Dashboard displaying real-time classroom status including subject, class type, next class, student count, temperature, noise level, comfort score, CO₂ level, humidity, and productivity metrics.</cite>
+(cite index="1-1">Smart Classroom AI Dashboard displaying real-time classroom status including subject, class type, next class, student count, temperature, noise level, comfort score, CO₂ level, humidity, and productivity metrics.</cite>
 
 ![Dashboard](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig1_dashboard.png)
 
 ---
 
 ### 🔝 Header & Navigation
-<cite index="1-2">Header section showing the system title, subtitle "Intelligent Automation & Real-Time Monitoring System," navigation menu, and current date and time display.</cite>
+(cite index="1-2">Header section showing the system title, subtitle "Intelligent Automation & Real-Time Monitoring System," navigation menu, and current date and time display.</cite>
 
 ![Header](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig2_header.png)
 
 ---
 
 ### ⚡ AI-Powered Predictive Insights
-<cite index="1-3">AI-Powered Predictive Insights section displaying real-time metrics including energy consumption, cost, CO₂ emissions, energy saved percentage, average occupancy, and peak occupancy for the day.</cite>
+(cite index="1-3">AI-Powered Predictive Insights section displaying real-time metrics including energy consumption, cost, CO₂ emissions, energy saved percentage, average occupancy, and peak occupancy for the day.</cite>
 
 ![AI Insights](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig3_ai_insights.png)
 
 ---
 
 ### 🔔 Real-Time Notifications & Predictive Analytics
-<cite index="1-4">Real-Time Notifications and Predictive Analytics section displaying attendance alerts, next class details, class end time, occupancy trend status, and attention status of the classroom.</cite>
+(cite index="1-4">Real-Time Notifications and Predictive Analytics section displaying attendance alerts, next class details, class end time, occupancy trend status, and attention status of the classroom.</cite>
 
 ![Notifications](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig4_notifications.png)
 
 ---
 
 ### 🚨 Security Anomalies & AI Recommendations
-<cite index="1-5">Security & Safety Anomalies and AI Smart Recommendations section displaying attendance-related alerts and system-generated suggestions such as switching to energy-saving mode during low occupancy.</cite>
+(cite index="1-5">Security & Safety Anomalies and AI Smart Recommendations section displaying attendance-related alerts and system-generated suggestions such as switching to energy-saving mode during low occupancy.</cite>
 
 ![Anomalies](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig5_anomalies.png)
 
 ---
 
 ### 🔧 Automated Control & Manual Override
-<cite index="1-6">Automated Control System and Manual Override Controls section showing the current device status (lights, fan, AC, and operating mode) along with manual options to control lights, fan speed, and air conditioner.</cite>
+(cite index="1-6">Automated Control System and Manual Override Controls section showing the current device status (lights, fan, AC, and operating mode) along with manual options to control lights, fan speed, and air conditioner.</cite>
 
 ![Controls](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig6_controls.png)
 
 ---
 
 ### 📈 Historical Analytics (Last 24 Hours)
-<cite index="1-7">Historical Analytics (Last 24 Hours) section displaying graphical trends for occupancy history, energy consumption, and comfort score over time.</cite>
+(cite index="1-7">Historical Analytics (Last 24 Hours) section displaying graphical trends for occupancy history, energy consumption, and comfort score over time.</cite>
 
 ![Analytics](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig7_historical.png)
 
 ---
 
 ### 🎥 Live Camera Feed — AI Person Detection
-<cite index="1-8">Live Camera Feed – AI Person Detection interface displaying camera control options including zoom, pan, reset, and fullscreen mode for monitoring classroom activity.</cite>
+(cite index="1-8">Live Camera Feed – AI Person Detection interface displaying camera control options including zoom, pan, reset, and fullscreen mode for monitoring classroom activity.</cite>
 
 ![Camera](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig8_camera.png)
 
 ---
 
 ### 📋 Real-Time Attendance Tracking & Analytics
-<cite index="1-9">Real-Time Attendance Tracking and Analytics Dashboard displaying student detection status along with graphical trends for student count and comfort score.</cite>
+(cite index="1-9">Real-Time Attendance Tracking and Analytics Dashboard displaying student detection status along with graphical trends for student count and comfort score.</cite>
 
 ![Attendance Tracking](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig9_attendance_tracking.png)
 
 ---
 
 ### 📅 Timetable Management
-<cite index="1-10">Timetable Management interface displaying the timetable upload section for submitting a class schedule image and processing it using AI-based OCR.</cite>
+(cite index="1-10">Timetable Management interface displaying the timetable upload section for submitting a class schedule image and processing it using AI-based OCR.</cite>
 
 ![Timetable](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig10_timetable.png)
 
 ---
 
 ### 🗓️ Current Timetable View
-<cite index="1-11">Current Timetable view displaying the weekly class schedule with time slots, theory and lab sessions, and highlighted subject entries for automated class detection and scheduling.</cite>
+(cite index="1-11">Current Timetable view displaying the weekly class schedule with time slots, theory and lab sessions, and highlighted subject entries for automated class detection and scheduling.</cite>
 
 ![Timetable View](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig11_timetable_view.png)
 
 ---
 
 ### 🕐 Today's Schedule
-<cite index="1-12">Today's Schedule section indicating that there is no active class and the classroom is currently free.</cite>
+(cite index="1-12">Today's Schedule section indicating that there is no active class and the classroom is currently free.</cite>
 
 ![Today Schedule](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig12_today_schedule.png)
 
 ---
 
 ### ✏️ Timetable Editor
-<cite index="1-13">Timetable Editor interface displaying editable time slots for Monday, allowing users to add, modify, or delete class entries with subject details and class type selection.</cite>
+(cite index="1-13">Timetable Editor interface displaying editable time slots for Monday, allowing users to add, modify, or delete class entries with subject details and class type selection.</cite>
 
 ![Timetable Editor](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig13_timetable_editor.png)
 
 ---
 
 ### 🧑‍🎓 Attendance System
-<cite index="1-14">Attendance System interface displaying face recognition-based attendance tracking, student enrollment statistics, live recognition section, present student list, and attendance export options.</cite>
+(cite index="1-14">Attendance System interface displaying face recognition-based attendance tracking, student enrollment statistics, live recognition section, present student list, and attendance export options.</cite>
 
 ![Attendance System](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig14_attendance_system.png)
 
 ---
 
 ### 🤳 Face Recognition Enrollment
-<cite index="1-15">Face Recognition Enrollment interface displaying the student registration form with ID, name, photo upload option, and the list of enrolled students with management controls.</cite>
+(cite index="1-15">Face Recognition Enrollment interface displaying the student registration form with ID, name, photo upload option, and the list of enrolled students with management controls.</cite>
 
 ![Face Enrollment](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig15_face_enrollment.png)
 
 ---
 
 ### 📤 Export Options
-<cite index="1-16">Export options section displaying buttons for exporting attendance data in CSV, PDF, and Excel formats.</cite>
+(cite index="1-16">Export options section displaying buttons for exporting attendance data in CSV, PDF, and Excel formats.</cite>
 
 ![Export](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig16_export.png)
 
 ---
 
 ### 📊 Excel Report Export
-<cite index="1-17">Smart Classroom Report exported in Excel format displaying current classroom status metrics, daily statistics, energy usage, environmental parameters, and attendance summary.</cite>
+(cite index="1-17">Smart Classroom Report exported in Excel format displaying current classroom status metrics, daily statistics, energy usage, environmental parameters, and attendance summary.</cite>
 
 ![Excel Report](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig17_excel_report.png)
 
 ---
 
 ### 📄 PDF Report Export
-<cite index="1-18">Smart Classroom AI – System Report in PDF format displaying generated timestamp, current classroom status metrics, and detailed daily statistics including energy usage, CO₂ emissions, productivity score, and system uptime.</cite>
+(cite index="1-18">Smart Classroom AI – System Report in PDF format displaying generated timestamp, current classroom status metrics, and detailed daily statistics including energy usage, CO₂ emissions, productivity score, and system uptime.</cite>
 
 ![PDF Report](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig18_pdf_report.png)
 
 ---
 
 ### 📋 Attendance Sheet (Excel)
-<cite index="1-19">Smart Classroom AI – Attendance Sheet in Excel format displaying date, time, subject details, student attendance table, and summary statistics including total present, comfort score, temperature, air quality, and productivity.</cite>
+(cite index="1-19">Smart Classroom AI – Attendance Sheet in Excel format displaying date, time, subject details, student attendance table, and summary statistics including total present, comfort score, temperature, air quality, and productivity.</cite>
 
 ![Attendance Sheet](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig19_attendance_sheet.png)
 
 ---
 
 ### 📷 Camera Offline — Reconnection Status
-<cite index="1-20">Live Camera Feed – AI Person Detection interface showing camera control options with a status message indicating "Camera Offline – Attempting Reconnection."</cite>
+(cite index="1-20">Live Camera Feed – AI Person Detection interface showing camera control options with a status message indicating "Camera Offline – Attempting Reconnection."</cite>
 
 ![Camera Offline](https://raw.githubusercontent.com/Ravishankarsubramani27/Smartclassroom_realtime/main/static/screenshots/fig20_camera_offline.png)
 
@@ -397,3 +416,7 @@ This project is licensed under the MIT License.
 
 > 🏆 Patent Published · Application No. 202641074230 · Indian Patent Office  
 > An AI-Assisted Context-Aware Smart Classroom Automation System combining computer vision, face recognition, and IoT automation.
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,55:0f766e,100:0b3d2e&height=140&section=footer&text=Detect%20%C2%B7%20Recognize%20%C2%B7%20Automate&fontSize=22&fontColor=ffffff&fontAlignY=72&animation=fadeIn" width="100%"/>
+</p>
