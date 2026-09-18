@@ -1,21 +1,39 @@
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b3d2e,45:0f766e,100:22d3ee&height=210&section=header&text=Smart%20Classroom%20AI&fontSize=52&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=Real-Time%20Intelligent%20Room%20Management%20System&descAlignY=58&descSize=16" width="100%" alt="Smart Classroom AI Banner"/>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=21&duration=2600&pause=700&color=22D3EE&center=true&vCenter=true&width=780&height=45&lines=Real-Time+Occupancy+Detection+with+YOLOv8;Face+Recognition+Attendance+Automation;Live+Environment+%26+Energy+Monitoring;AI-Powered+Predictive+Insights+%26+Alerts;Patent-Published+Smart+Classroom+System" alt="Typing SVG"/>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=soft&color=0:1e1b4b,50:7c3aed,100:ec4899&height=230&section=header&text=Smart%20Classroom%20AI&fontSize=58&fontColor=ffffff&fontAlignY=32&animation=twinkling&desc=Patent-Published%20%C2%B7%20Vision%20%2B%20Face%20Recognition%20%2B%20IoT%20Automation&descAlignY=52&descSize=17"/>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Patent-Published-orange?style=for-the-badge" alt="Patent"/>
-  <img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Flask-3.x-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
-  <img src="https://img.shields.io/badge/YOLOv8-Ultralytics-8B5CF6?style=for-the-badge" alt="YOLOv8"/>
-  <img src="https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
-  <img src="https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge" alt="License"/>
-</p>
+<img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=700&size=20&duration=2400&pause=600&color=EC4899&center=true&vCenter=true&width=760&height=42&lines=%F0%9F%93%B9+YOLOv8+Occupancy+Detection+in+Real+Time;%F0%9F%A7%91%E2%80%8D%F0%9F%8E%93+Face+Recognition+Attendance%2C+Zero+Manual+Entry;%F0%9F%8C%A1+Live+Energy%2C+Climate+%26+Comfort+Analytics;%F0%9F%A4%96+AI+Recommendations+that+Save+Power;%F0%9F%93%9C+Indian+Patent+Office+%E2%80%94+App+No.+202641074230"/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=0,2,12,20,30&height=3" width="100%"/>
+<br/>
+
+<img src="https://skillicons.dev/icons?i=python,flask,opencv,pytorch,html,css,js&theme=dark" height="55"/>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/🏆_PATENT-PUBLISHED-ec4899?style=for-the-badge&labelColor=1e1b4b"/>
+<img src="https://img.shields.io/badge/🐍_PYTHON-3.11-7c3aed?style=for-the-badge&labelColor=1e1b4b"/>
+<img src="https://img.shields.io/badge/⚡_FLASK-3.x-f59e0b?style=for-the-badge&labelColor=1e1b4b"/>
+<img src="https://img.shields.io/badge/👁️_YOLOv8-ULTRALYTICS-06b6d4?style=for-the-badge&labelColor=1e1b4b"/>
+<img src="https://img.shields.io/badge/📄_LICENSE-MIT-10b981?style=for-the-badge&labelColor=1e1b4b"/>
+
+<br/><br/>
+
+<a href="#-patent-information"><img src="https://img.shields.io/badge/🏛️_Patent-Info-1e1b4b?style=flat-square&labelColor=7c3aed"/></a>
+<a href="#-screenshots"><img src="https://img.shields.io/badge/📸_Screenshots-20_Views-1e1b4b?style=flat-square&labelColor=ec4899"/></a>
+<a href="#-features"><img src="https://img.shields.io/badge/✨_Features-12_Total-1e1b4b?style=flat-square&labelColor=f59e0b"/></a>
+<a href="#-quick-start"><img src="https://img.shields.io/badge/🚀_Setup-Quick_Start-1e1b4b?style=flat-square&labelColor=06b6d4"/></a>
+<a href="#-troubleshooting"><img src="https://img.shields.io/badge/🔧_Help-Troubleshooting-1e1b4b?style=flat-square&labelColor=10b981"/></a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/github/stars/Ravishankarsubramani27/Smartclassroom_realtime?style=social"/>
+<img src="https://img.shields.io/github/forks/Ravishankarsubramani27/Smartclassroom_realtime?style=social"/>
+<img src="https://img.shields.io/github/last-commit/Ravishankarsubramani27/Smartclassroom_realtime?style=flat-square&color=ec4899&labelColor=1e1b4b"/>
+<img src="https://komarev.com/ghpvc/?username=SmartClassroomAI&label=Repo+Views&style=flat-square&color=7c3aed"/>
+
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:1e1b4b,50:7c3aed,100:ec4899&height=4" width="100%"/>
 
 # 🏫 Smart Classroom AI — Real-Time Intelligent Room Management System
 
@@ -417,6 +435,10 @@ This project is licensed under the MIT License.
 > 🏆 Patent Published · Application No. 202641074230 · Indian Patent Office  
 > An AI-Assisted Context-Aware Smart Classroom Automation System combining computer vision, face recognition, and IoT automation.
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,55:0f766e,100:0b3d2e&height=140&section=footer&text=Detect%20%C2%B7%20Recognize%20%C2%B7%20Automate&fontSize=22&fontColor=ffffff&fontAlignY=72&animation=fadeIn" width="100%"/>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:ec4899,50:7c3aed,100:1e1b4b&height=4" width="100%"/>
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ec4899,50:7c3aed,100:1e1b4b&height=150&section=footer&text=Sense%20%C2%B7%20Recognize%20%C2%B7%20Automate&fontSize=24&fontColor=ffffff&fontAlignY=75&animation=twinkling"/>
+
+</div>
